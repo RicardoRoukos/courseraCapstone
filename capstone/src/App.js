@@ -1,8 +1,16 @@
 // import logo from './logo.svg';
 import './App.css';
+import Header from './header';
+import Footer from './footer';
 
 function App() {
-  return <h1>Hello world!</h1>
+  return(
+    <>
+    <Header />
+    <Footer />
+    </>
+  )
+
 }
 
 export default App;
