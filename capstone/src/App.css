@@ -1,14 +1,20 @@
+h1 {
+  color: #F4CE14;
+}
+
+
 
 
 nav {
   display: flex;
   justify-content: space-evenly;
+  padding: 20px;
 }
 nav *  {
   text-decoration: none;
   list-style-type: none;
   color: black;
-  font-family: 'Open Sans', sans-serif;
+  font-family: cursive;
 }
 
 nav ul {
@@ -17,7 +23,10 @@ nav ul {
   margin: 10px;
   gap: 30px;
   align-items: center;
-  
+}
+
+nav a:hover {
+  color: #495E57;
 }
 
 footer {
@@ -37,6 +46,15 @@ footer * {
 
 footer  a:hover {
   color: aqua;
+  
+}
+
+.littleLemonSection {
+  background-color: #495E57;
+}
+
+.littleLemon p, .littleLemon h3 {
+  color: white;
 }
 
 .littleLemon {

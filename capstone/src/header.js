@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import React from 'react';
 import "./App.css";
 
 function Header() {
@@ -6,7 +6,7 @@ function Header() {
     <>
       <nav>
         <div>
-          <img src="logo192.png" alt="logo" />
+        <img src="logo.png" alt="SVG" />
         </div>
         <ul>
           <li>

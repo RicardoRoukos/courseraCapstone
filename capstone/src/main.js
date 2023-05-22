@@ -4,8 +4,9 @@ import "./App.css";
 function Main() {
   return (
     <>
-      <section class="littleLemon">
-        <div>
+      <section class="littleLemonSection">
+        <div class="littleLemon">
+        <div class="littleLemonText">
           <h1>Little Lemon</h1>
           <h3>Chicago</h3>
           <p>
@@ -15,6 +16,7 @@ function Main() {
         </div>
         <div class="imageLemon">
           <img src="logo192.png" alt="logo" />
+        </div>
         </div>
       </section>
       <section>
@@ -29,7 +31,7 @@ function Main() {
                 <h3>Greek Salad</h3>
                 <p><span>$15.32</span></p>
                 </div>
-            
+
                 <p>greek salad greek salad greek salad  greek salad  greek salad  greek salad </p>
                 <b>Order a delivery</b>
             </div>
@@ -41,7 +43,7 @@ function Main() {
                 <h3>Greek Salad</h3>
                 <p><span>$15.32</span></p>
                 </div>
-            
+
                 <p>greek salad greek salad greek salad  greek salad  greek salad  greek salad </p>
                 <b>Order a delivery</b>
             </div>
