@@ -2,7 +2,7 @@
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 nav *  {
   text-decoration: none;
@@ -18,4 +18,67 @@ nav ul {
   gap: 30px;
   align-items: center;
   
+}
+
+footer {
+  display: flex;
+  gap: 100px;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin: 10px;
+  border-top: 2px solid #eee;
+}
+
+footer * {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+
+footer  a:hover {
+  color: aqua;
+}
+
+.littleLemon {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+
+.cards,.topRow {
+  display: flex;
+  gap: 50px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 20px;
+  justify-content: space-around;
+}
+
+
+.card {
+  background-color: azure;
+  display: flex;
+  position: relative;
+  padding: 20px;
+  margin-top: 10rem;
+  max-width: 200px;
+}
+
+.card img {
+  position: absolute;
+  top: -90%;
+  border: 1px solid;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.cardTextTop {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+span {
+  color: brown;
 }

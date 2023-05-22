@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import Header from './header';
+
 
 function Footer() {
     return (    <>
@@ -10,7 +10,14 @@ function Footer() {
           </div>
           <div>
               <h1>Navigation</h1>
-              <Header />
+              <ul>
+                  <li><a href="index.js">Home</a></li>
+                  <li><a href="index.js">About</a></li>
+                  <li><a href="index.js">Menu</a></li>
+                  <li><a href="index.js">Reservations</a></li>
+                  <li><a href="index.js">Order Online</a></li>
+                  <li><a href="index.js">Login</a></li>
+              </ul>
           </div>
           <div>
               <h2>Contact</h2>
