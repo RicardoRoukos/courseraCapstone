@@ -33,20 +33,10 @@ function Main() {
         <div class="cards">
         
             <Card image="left.png" texth3="Greek Salad" textp="The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons." price="$12.99" />
+            <Card image="center.png" texth3="Bruchetta" textp="Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. " price="$5.99" />
+            <Card image="right.png" texth3="Lemon Dessert" textp="This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined." price="$5.00" />
           
-       
-          <div class="card">
-            <img src="logo192.png" alt="logo"/>
-            <div class="cardText">
-                <div class="cardTextTop">
-                <h3>Greek Salad</h3>
-                <p><span>$15.32</span></p>
-                </div>
-            
-                <p>greek salad greek salad greek salad  greek salad  greek salad  greek salad </p>
-                <b>Order a delivery</b>
-            </div>
-          </div>
+
         </div>
       </section>
     </>
