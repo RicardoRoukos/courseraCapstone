@@ -1,5 +1,8 @@
 h1 {
+  font-size: 3rem;
   color: #F4CE14;
+  white-space: nowrap;
+  margin-block: 0.2rem;
 }
 
 
@@ -49,6 +52,11 @@ footer  a:hover {
   
 }
 
+.littleLemonText {
+  flex-basis: 15%;
+  padding: 20px;
+}
+
 .littleLemonSection {
   background-color: #495E57;
 }
@@ -59,16 +67,17 @@ footer  a:hover {
 
 .littleLemon {
   display: flex;
-  width: 90%;
-  margin: 0 auto;
+
+  margin: 0 20em;
   padding: 20px;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  position: relative;
 }
 
 .cards,.topRow {
   display: flex;
   gap: 50px;
-  margin: 0 auto;
+  margin: 5rem auto;
   width: 90%;
   padding: 20px;
   justify-content: space-around;
@@ -76,20 +85,25 @@ footer  a:hover {
 
 
 .card {
-  background-color: azure;
+  background-color: #EDEFEE;
   display: flex;
   position: relative;
   padding: 20px;
   margin-top: 10rem;
   max-width: 200px;
+  box-shadow: 0 0 20px 5px rgba(43, 29, 29, 0.5);
 }
 
 .card img {
   position: absolute;
-  top: -90%;
+  top: -80%;
+  left: 0;
   border: 1px solid;
   border-top-left-radius: 30px;
+  width: 100%;
   border-top-right-radius: 30px;
+  border: none;
+  box-shadow: 0 0 20px 5px rgba(43, 29, 29, 0.5);
 }
 .cardTextTop {
   display: flex;
@@ -99,4 +113,27 @@ footer  a:hover {
 
 span {
   color: brown;
+}
+
+button {
+  background-color: #F4CE14;
+  padding: 15px;
+  border-radius: 15px;
+  font-family: 'calibri-bold' sans-serif;
+  font-weight: 600;
+  border: none;
+}
+
+.imageLemon  {
+  width: 50%;
+  transform: translateX(50%);
+  position: absolute;
+  left: 50%;
+  top: 3rem;
+  height: auto;
+}
+
+.imageLemon img {
+  width: 300px;
+  border-radius: 20px;
 }
