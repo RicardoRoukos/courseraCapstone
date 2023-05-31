@@ -1,31 +1,32 @@
+import { Link } from 'react-router-dom';
+
 import React from 'react';
 import "./App.css";
-
 function Header() {
   return (
     <>
       <nav>
         <div>
-        <img src="logo.png" alt="SVG" />
+          <img src="logo.png" alt="SVG" />
         </div>
         <ul>
           <li>
-            <a href="index.js">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="index.js">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="index.js">Menu</a>
+            <Link to="/menu">Menu</Link>
           </li>
           <li>
-            <a href="index.js">Reservations</a>
+            <Link to="/reservations">Reservations</Link>
           </li>
           <li>
-            <a href="index.js">Order Online</a>
+            <Link to="/order-online">Order Online</Link>
           </li>
           <li>
-            <a href="index.js">Login</a>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       </nav>
