@@ -1,9 +1,7 @@
-// import logo from './logo.svg';
 import './App.css';
 import Header from './header';
 import Footer from './footer';
-import Main from './main';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from './home';
 import About from './about';
@@ -13,30 +11,22 @@ import OrderOnline from './orderOnline';
 import Login from './login';
 
 function App() {
-  return(
+  return (
     <>
-       <Router>
+      <Router>
         <Header />
         <Routes>
-        <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/menu" component={Menu} />
-          <Route path="/reservations" component={Reservations} />
-          <Route path="/order-online" component={OrderOnline} />
-          <Route path="/login" component={Login} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/order-online" element={<OrderOnline />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
-     
- 
-       </Router>
-
-    <Main />
-    <Footer />
-
-
-   
+        <Footer />
+      </Router>
     </>
-  )
-
+  );
 }
 
 export default App;

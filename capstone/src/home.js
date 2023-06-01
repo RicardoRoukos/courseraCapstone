@@ -1,4 +1,12 @@
+import React from 'react';
+import Main from './main';
 export default function Home() {
-    return <h2>Home</h2>;
+    return (
+      <>
+
+        <Main />
+      </>
+  
+      );
   }
 

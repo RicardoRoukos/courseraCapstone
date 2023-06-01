@@ -7,7 +7,7 @@ function Header() {
     <>
       <nav>
         <div>
-          <img src="logo.png" alt="SVG" />
+          <img src="logo2.png" alt="SVG" />
         </div>
         <ul>
           <li>

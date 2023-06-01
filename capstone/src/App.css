@@ -34,11 +34,11 @@ nav a:hover {
 
 footer {
   display: flex;
-  background-color: #D9D9D9;
+  background-color: #495E57;
   gap: 100px;
   justify-content: space-evenly;
   padding: 20px;
-  margin: 10px;
+
   border-top: 2px solid #eee;
 }
 
@@ -49,7 +49,7 @@ footer * {
 }
 
 footer  a:hover {
-  color: aqua;
+  color: white;
   
 }
 
@@ -137,4 +137,88 @@ button {
 .imageLemon img {
   width: 300px;
   border-radius: 20px;
+}
+
+.rating {
+  
+  background-color: #495E57;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  gap: 0;
+  padding: 100px;
+}
+
+.ratingbox {
+  background-color: #D9D9D9;
+  display: flex;
+  padding: 20px;
+  border: 1px solid white;
+  box-shadow: 0 0 3px 1px white;
+  border-radius: 10px;
+}
+
+.rightCol {
+  text-align: center;
+  align-self: center;
+  padding: 10px;
+}
+.ratingbox img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+  border: 1px solid #495E57;
+}
+
+.ratingbox:hover {
+  transform: scale(1.1);
+}
+
+.bannerdescription {
+  display: flex;
+  margin: 0 auto;
+  padding: 100px;
+  justify-content: center;
+  gap: 50px;
+}
+
+.leftDescription { 
+  padding: 5px;
+  flex-basis: 30%;
+}
+
+.rightDescription {
+  position: relative;
+}
+
+.bannerdescription img {
+  border: 1px solid #495E57;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 1px #495E57;
+}
+
+.imageTop {
+  position: absolute;
+  top: -50px;
+  left: 40%;
+}
+
+.about-us {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-us h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 16px;
 }
