@@ -1,14 +1,20 @@
-// import logo from './logo.svg';
+import React, {useState} from "react";
 import "./App.css";
 import Button from "./button";
 import Card from "./card";
 import Ratingcard from "./ratingcard";
+import  {Link } from 'react-router-dom';
+
 
 function Main() {
-  const handleClick = () => {
-    console.log('handleClick');
-  }
-
+  const [availableTimes] = useState([
+    '17:00',
+    '18:00',
+    '19:00',
+    '20:00',
+    '21:00',
+    '22:00',
+  ]);
 
   return (
     <>
@@ -20,7 +26,10 @@ function Main() {
           <p>
           We are a family owned Mediteranean restaurant focused on traditional recipes served with a modern twist
           </p>
-          <Button text='Reserve a table' onClick={handleClick} />
+          <Link to="/Reservations">   
+            <Button text='Reserve a table' availableTimes={availableTimes} />
+          </Link>
+       
         </div>
         <div className="imageLemon">
           <img src="bag.png" alt="logo" />

@@ -4,7 +4,7 @@ function Card({image,texth3,price,textp}) {
 
   
     return (
-        <div class="card">
+        <div className="card">
         <img src={image} alt="logo"/>
         <div className="cardText">
             <div className="cardTextTop">
