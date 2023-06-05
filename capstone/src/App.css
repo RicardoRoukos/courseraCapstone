@@ -268,3 +268,12 @@ button {
 .reservation-form select {
   width: 100%;
 }
+
+.confirmation {
+  width: 70%;
+  display: flex;
+  margin: 5rem auto 0 auto;
+  height: 500px;
+text-align: center;
+justify-content: center;
+}

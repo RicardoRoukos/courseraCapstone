@@ -9,6 +9,7 @@ import Menu from './menu';
 import Reservations from './reservations';
 import OrderOnline from './orderOnline';
 import Login from './login';
+import Confirm from './confirm';
 
 function App() {
   const [availableTimes] = useState([
@@ -30,6 +31,7 @@ function App() {
           <Route path="/reservations" element={<Reservations availableTimes={availableTimes} />} />
           <Route path="/order-online" element={<OrderOnline />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/confirm" element={<Confirm />} />
         </Routes>
         <Footer />
       </Router>

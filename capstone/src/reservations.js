@@ -67,7 +67,7 @@ export default function Reservations({ availableTimes }) {
     e.preventDefault();
     console.log(date, time, occasion, guests);
     setFilteredTimes(filteredTimes.filter((availableTime) => availableTime !== time));
-    navigate('/');
+    navigate('/Confirm');
   };
 
   return (
