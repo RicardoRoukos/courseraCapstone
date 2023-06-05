@@ -246,16 +246,16 @@ button {
 
 .reservation-form input[type='submit'] {
   padding: 8px 16px;
-  background-color: #4caf50;
+  background-color: #F4CE14;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.reservation-form input[type='submit']:hover {
-  background-color: #45a049;
-}
+/* .reservation-form input[type='submit']:hover {
+  background-color: #495E57;
+} */
 
 .reservation-form input[type='date'] {
   width: 100%;
@@ -276,4 +276,22 @@ button {
   height: 500px;
 text-align: center;
 justify-content: center;
+}
+
+input[type="submit"] {
+  background-color: #F4CE14;
+}
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.disabled:hover {
+  /* Additional styles when hovering over the disabled button, if needed */
 }

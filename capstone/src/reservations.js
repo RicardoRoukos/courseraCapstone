@@ -1,10 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
-
-
-
-
 export default function Reservations({ availableTimes }) {
   const navigate = useNavigate();
   const [date, setDate] = useState('');
@@ -12,6 +8,8 @@ export default function Reservations({ availableTimes }) {
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('');
   const [filteredTimes, setFilteredTimes] = useState(availableTimes);
+  const [formValid, setFormValid] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     filterAvailableTimes(date);
@@ -21,8 +19,6 @@ export default function Reservations({ availableTimes }) {
     const currentTime = new Date();
     const filtered = availableTimes.filter((availableTime) => {
       const selectedDateTime = new Date(`${selectedDate} ${availableTime}`);
-
-      // Check if the selected time is in the past or conflicts with a reservation
       const isReserved = selectedDateTime <= currentTime || checkReservation(selectedDateTime);
       return !isReserved;
     });
@@ -31,14 +27,12 @@ export default function Reservations({ availableTimes }) {
 
   const checkReservation = (selectedDateTime) => {
     // Perform the reservation check logic here
-    // You can check against a database or any other data source
     // For demonstration purposes, let's assume we have a reservations array
     const reservations = [
       { date: '2023-06-04', time: '18:00' },
       { date: '2023-06-04', time: '20:00' },
     ];
 
-    // Check if there is a reservation at the selected date and time
     return reservations.some((reservation) => {
       const reservationDateTime = new Date(`${reservation.date} ${reservation.time}`);
       return reservationDateTime.getTime() === selectedDateTime.getTime();
@@ -48,7 +42,7 @@ export default function Reservations({ availableTimes }) {
   const handleDate = (e) => {
     const selectedDate = e.target.value;
     setDate(selectedDate);
-    setTime(''); // Reset the time when the date changes
+    setTime('');
   };
 
   const handleTime = (e) => {
@@ -65,25 +59,67 @@ export default function Reservations({ availableTimes }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(date, time, occasion, guests);
-    setFilteredTimes(filteredTimes.filter((availableTime) => availableTime !== time));
-    navigate('/Confirm');
+
+    if (date === '') {
+      setErrorMessage('Please choose a date.');
+      return;
+    }
+
+    if (time === '') {
+      setErrorMessage('Please choose a time.');
+      return;
+    }
+
+    setErrorMessage('');
+
+    const formData = { date, time, guests, occasion };
+
+    // Make the API call to submit the reservation
+    window.submitAPI(formData)
+      .then((success) => {
+        if (success) {
+          filterAvailableTimes(date);
+          navigate('/');
+        } else {
+          console.log('Error submitting reservation');
+          navigate('/');
+        }
+      })
+      .catch((error) => {
+        console.log('Error submitting reservation:', error);
+        navigate('/');
+      });
+  };
+
+  useEffect(() => {
+    validateForm();
+  }, [date, time, guests]);
+
+  const validateForm = () => {
+    const isValid = date && time && guests > 0;
+    setFormValid(isValid);
   };
 
   return (
     <>
       <form className="reservation-form" onSubmit={handleSubmit}>
-        <label htmlFor="date">Choose date</label>
-        <input type="date" id="date" value={date} onChange={handleDate} />
+        <label htmlFor="date" aria-label="Choose date">
+          Choose date
+        </label>
+        <input type="date" id="date" value={date} onChange={handleDate} required />
 
-        <label htmlFor="time">Choose time</label>
-        <select id="time" value={time} onChange={handleTime}>
+        <label htmlFor="time" aria-label="Choose time">
+          Choose time
+        </label>
+        <select id="time" value={time} onChange={handleTime} required>
           {filteredTimes.map((availableTime) => (
             <option key={availableTime}>{availableTime}</option>
           ))}
         </select>
 
-        <label htmlFor="guests">Number of guests</label>
+        <label htmlFor="guests" aria-label="Number of guests">
+          Number of guests
+        </label>
         <input
           type="number"
           placeholder="1"
@@ -92,15 +128,26 @@ export default function Reservations({ availableTimes }) {
           id="guests"
           value={guests}
           onChange={handleGuest}
+          required
         />
 
-        <label htmlFor="occasion">Occasion</label>
-        <select id="occasion" value={occasion} onChange={handleOccasion}>
+        <label htmlFor="occasion" aria-label="Occasion">
+          Occasion
+        </label>
+        <select id="occasion" value={occasion} onChange={handleOccasion} required>
+          <option value="">Select an occasion</option>
           <option value="Birthday">Birthday</option>
           <option value="Anniversary">Anniversary</option>
         </select>
 
-        <input type="submit" value="Make Your reservation" />
+        {errorMessage && <p className="error">{errorMessage}</p>}
+
+        <input
+          type="submit"
+          value="Make Your reservation"
+          disabled={!formValid}
+          className={formValid ? '' : 'disabled'}
+        />
       </form>
     </>
   );
