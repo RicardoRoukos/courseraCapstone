@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-
+import { Link } from 'react-router-dom';
 
 function Footer() {
     const imgStyle =  {
@@ -17,20 +17,26 @@ function Footer() {
           <div>
               <h1>Navigation</h1>
               <ul style={paddingLeft}>
-                  <li><a href="index.js">Home</a></li>
-                  <li><a href="index.js">About</a></li>
-                  <li><a href="index.js">Menu</a></li>
-                  <li><a href="index.js">Reservations</a></li>
-                  <li><a href="index.js">Order Online</a></li>
-                  <li><a href="index.js">Login</a></li>
+              <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+  
+          <li>
+            <Link to="/reservations">Reservations</Link>
+          </li>
+     
+     
               </ul>
           </div>
           <div>
               <h2>Contact</h2>
               <ul style={paddingLeft}>
-                  <li><a href="index.js">Address</a></li>
-                  <li><a href="index.js">Phone Number</a></li>
-                  <li><a href="index.js">Email</a></li>
+                  <li><a >Address :Chicago</a></li>
+                  <li><a href="tel: 001111111">Phone Number: +1 1111111</a></li>
+                  <li><a href="mailto: littleLemon@littlelemon.com">Email: littleLemon@littlelemon.com</a></li>
               </ul>
           </div>
           <div>

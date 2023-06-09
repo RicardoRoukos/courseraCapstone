@@ -7,7 +7,7 @@ function Header() {
     <>
       <nav>
         <div>
-          <img src="logo2.png" alt="SVG" />
+        <Link to="/"><img src="logo2.png" alt="SVG" /></Link>
         </div>
         <ul>
           <li>
@@ -16,17 +16,13 @@ function Header() {
           <li>
             <Link to="/about">About</Link>
           </li>
-          <li>
-            <Link to="/menu">Menu</Link>
-          </li>
+      
           <li>
             <Link to="/reservations">Reservations</Link>
           </li>
+    
           <li>
-            <Link to="/order-online">Order Online</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
       </nav>

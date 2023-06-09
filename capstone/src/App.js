@@ -8,7 +8,7 @@ import About from './about';
 import Menu from './menu';
 import Reservations from './reservations';
 import OrderOnline from './orderOnline';
-import Login from './login';
+import Contact from './contact';
 import Confirm from './confirm';
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/reservations" element={<Reservations availableTimes={availableTimes} />} />
           <Route path="/order-online" element={<OrderOnline />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/confirm" element={<Confirm />} />
         </Routes>
         <Footer />
